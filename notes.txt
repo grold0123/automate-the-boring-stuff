@@ -1,4 +1,5 @@
-https://automatetheboringstuff.com/
+#https://automatetheboringstuff.com/
+
 
 Python Basics   https://automatetheboringstuff.com/3e/chapter1.html
         1.  programming language (with syntax rules for writing what is considered valid python code)
@@ -173,9 +174,58 @@ if-else and flow control    https://automatetheboringstuff.com/3e/chapter2.html
     COMPONENTS OF FLOW CONTROL 
             condition, decides what to do based on its evaluated value 
             clause, followed by this block of code 
-        example 
-            username = 'mary'
-            password = 'swordfish'
-            if username == 'mary':
-                
-
+            example 
+                username = 'mary'
+                password = 'swordfish'
+                if username == 'mary':              +--- condition
+                    print('hello, mary')            +--- clause
+                    if password == 'swordfish':             +---condition
+                        print('access granted')             +---clause
+                    else:                                   +---condition
+                        print('wrong password.')            +---clause
+        if 
+                +most common type of flow control 
+                +clause will execute if the statement's condition is True.
+                +clause is skipped if codition is False
+            +if this condition is true, execute the code in the clause 
+            + 
+                -   The if keyword 
+                -   A condition (that is, an expression that evaluates to True or False)
+                -   A colon 
+                -   an indented block of code, called an if clause or if block 
+            +example 
+                name = 'alice'
+                if name == 'alice':
+                    print('Hi, Alice.')
+        else
+            + an else clause is executed only when the if statement's condition is False.
+                + the else keyword
+                + a colon 
+                + indented block of code 
+            + example 
+                name = 'Alice'
+                if name == 'Alice':
+                    print('Hi, Alice.')
+                else:
+                    print('Hello, stranger.')    
+        elif 
+            + if one of many possible clauses to execute 
+            + provides another condition that is checked only 
+                if all the previous conditions were False 
+            + 
+                +   The elif keyword
+                +   a condition (that is, an expression that evaluates to True or False)
+                +   a colon 
+                +   an indented block of code 
+            + example 
+                name = 'alice'
+                age = 33 
+                if name == 'alice':
+                    print('hi, alice.')
+                elif age < 12:
+                    print('you are not alice, kiddo.')
+    A SHORT PROGRAM: OPPOSITE DAY 
+        .\python-exercises\opposite-day.py
+    A SHORT PROGRAM: DISHONEST CAPACITY CALCULATOR 
+        .\python-exercises\dishonest-capacity-calculator.py
+    
