@@ -228,4 +228,65 @@ if-else and flow control    https://automatetheboringstuff.com/3e/chapter2.html
         .\python-exercises\opposite-day.py
     A SHORT PROGRAM: DISHONEST CAPACITY CALCULATOR 
         .\python-exercises\dishonest-capacity-calculator.py
-    
+Loops 
+        +   how to repeatedly execute blocks of code using loops
+        +   2 kinds of loops 
+            +   while 
+            +   for 
+    while Loop statements 
+        +   structure 
+            +   the while keyword 
+            +   a condition (that is, an expression that evaluates to True or False)
+            +   a colon 
+            +   indented block of code , called the while clause or while block 
+        +   example 
+            an if statement
+                spam = 0 
+                if spam < 5:
+                    print('hello, world.')
+                    spam = spam + 1
+            a while statement 
+                spam = 0 
+                while spam < 5:
+                    print('hello, world.')
+                    spam = spam + 1
+        +   break statements 
+            +   used to exit the loop
+            +   sample
+                    while True:
+                        print('Please type your name.')
+                        name = input('>')
+                        if name == 'your name':
+                            break
+                    print('Thank you!')
+        +   continue statements 
+            +   used to immediately jump back to the start of the loop 
+            +   sample 
+                while True:
+                    print('Who are you?')
+                    name = input('>')
+                    if name != 'Joe':
+                        continue 
+                    print('Hello, Joe. What is the password? (It is a fish.)')
+                    password = input('>')
+                    if password == 'swordfish':
+                        break 
+                print('Access granted.')
+    for Loops and range() Function 
+        +   structure
+            +   the for keyword 
+            +   a variable name 
+            +   the in keyword 
+            +   a collection
+            +   indented code block called the for clause or for block 
+        +   sample 
+            print('hello!')
+            for i in range(5):
+                print('On this iteration, i is set to '+str(i))
+            print('Goodbye!')
+    A short program: Guess the number 
+        .\python-exercises\guess-the-number-while-version.py
+        .\python-exercises\guess-the-number-for-version.py
+    A short program: Rock, Paper, Scissors 
+        .\python-exercises\rock-paper-scissors.py
+        
