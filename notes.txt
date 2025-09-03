@@ -1,0 +1,181 @@
+https://automatetheboringstuff.com/
+
+Python Basics   https://automatetheboringstuff.com/3e/chapter1.html
+        1.  programming language (with syntax rules for writing what is considered valid python code)
+        2.  interpreter software that reads the source code and perform its instructions
+    ENTERING EXPRESSIONS INTO THE INTERACTIVE SHELL
+        >>> 2+2,    2+2 is an example of an expression, a kind of programming instruction in the language             
+        4,          evaluate down to a single value
+    INTEGER, FLOATING-POINT AND STRING DATA TYPES
+        integer values, whole numbers
+        floating point numbers or floats, number with decimals
+        string values, text values enclosed with quotes ''  / ""
+    STRING CONCATENATION AND REPLICATION
+        string concatenation, joining strings using + operator 
+                >>>'alice' + 'box'
+                alicebob
+            -   the expression evaluates down to a single value
+        string replication, using * operator to repeat a string by an int value 
+            >>> 'alice'*5
+            'alicealicealicealicealice'
+    STORING VALUES IN VARIABLES 
+        a box of computer memory, where you can store a single value 
+    ASSIGNMENT STATEMENTS 
+        assignment statement, using '=' operator 
+            >>> a = 100 
+            >>> a 
+            100
+    FIRST PROGRAM 
+        # .\python-exercises\first-program.py
+    COMMENTS
+        start a line using #
+        python ignores comments 
+        programmers use them to write notes / 
+        used to remind yourself what the code is trying to do
+    print() FUNCTION 
+        display the string value inside its parentheses on the screen
+            >>>print('Hello, world!')
+            Hello, world!
+    input() FUNCTION 
+        waits for the user to type some text on the keyboard and press ENTER:
+            >>>my_name = input('>')
+            >gab
+            >>>my_name 
+            gab
+    len() FUNCTION
+        number of elements in a value
+            example for a string value, 
+                >>>name = 'gab'
+                >>>len(name)
+                3
+            in a string value the number of character is evaluated
+    THE str() , int() , float() FUNCTIONS
+        str() , converts a value to its string equivalent
+            >>>str(29)
+            '29'
+            >>>print('I am'+str()+ ' years old.' )
+            I am 29 years old.
+        int(), converts a value to its int equivalent 
+            >>>int(1.12)
+            1
+        float(), converts a value to its float equivalent
+            >>>float(1)
+            1.0
+    type() FUNCTION 
+        pass a value to type() function will determine what type they are 
+            >>> type(42)                                                                           
+            <class 'int'>
+            >>> type(42.0)
+            <class 'float'>
+            >>> type('forty two')
+            <class 'str'>
+            >>> name = 'zophie'
+            >>> type(name)
+            <class 'str'>
+            >>> type(len(name))
+            <class 'int'>
+    round() FUNCTION 
+        round() function, accepts a float and returns  the nearest integer 
+            >>> round(3.14)
+            3
+            >>> round(7.7)
+            8
+            >>> round(-2.2)
+            -2
+            >>> 
+        round also accepts optional second argument 
+            >>> round(3.14,1)
+            3.1
+            >>> round(7.7777,3)
+            7.778
+    abs() FUNCTION 
+        absolute distance of a value from 0
+            >>> abs(25)
+            25
+            >>> abs(-25)
+            25
+            >>> abs(-3.14)
+            3.14
+            >>> abs(0)
+            0 
+if-else and flow control    https://automatetheboringstuff.com/3e/chapter2.html
+        1.  decide which python instructions to execute under which conditions
+        2.  ability to skip, repeat, or choose one of several instructions to run
+    BOOLEAN VALUES 
+        has 2 values, True and False 
+            >>> spam = True
+            >>> spam
+            True
+            >>> true
+            Traceback (most recent call last):
+            File "<python-input-20>", line 1, in <module>
+                true
+            NameError: name 'true' is not defined. Did you mean: 'True'?
+            >>> False = 2+2
+            File "<python-input-21>", line 1
+                False = 2+2
+                ^^^^^
+            SyntaxError: cannot assign to False
+    COMPARISON OPERATORS 
+            == , equal to 
+                5 == 5 , evaluates to True 
+                4 == 2 + 2 , evaluates to True 
+            != , not equal to 
+                1 != 2 , evaluates to True 
+                'hello' != 'hello' , evaluates to False 
+            <, less than 
+                10 < 5 , evaluates to False 
+                1.999 < 5 , evaluates to True
+            >, greater than 
+                1+1 > 4 , evaluates to False 
+                99 > 4 + 8 , evaluates to True 
+            <= less than or equal to 
+                4 <= 5 , evaluates to True 
+                5 <= 5 , evaluates to True 
+            >= greater than or equal to 
+                5 >= 4 , evaluates to True 
+                5 >= 5 , evaluates to True 
+        using in number values 
+            >>> 42 == 42
+            True
+            >>> 42 == 99
+            False
+            >>> 2 != 3
+            True
+            >>> 2 != 2
+            False   
+            >>> 42 == 42.0
+            True
+            >>> 42 == '42'
+            False 
+        using in string values 
+            >>> 'hello' == 'hello'
+            True
+            >>> 'hello' == 'hello'
+            True
+            >>> 'hello' == 'Hello'
+            False
+            >>> 'dog' != 'cat'
+            True
+            >>> True == True
+            True
+            >>> True != False
+            True
+    BOOLEAN OPERATORS
+        all takes two values or expressions and evaluate to a single bool value 
+            and , evaluates to True if both are True otherwise False   
+                >>> True and True
+                True
+                >>> True and False
+                False
+            or , evaluates to True if at least one is True , False if both are False
+            not , only takes one bool expression or value , evaluates to negative value 
+    COMPONENTS OF FLOW CONTROL 
+            condition, decides what to do based on its evaluated value 
+            clause, followed by this block of code 
+        example 
+            username = 'mary'
+            password = 'swordfish'
+            if username == 'mary':
+                
+
