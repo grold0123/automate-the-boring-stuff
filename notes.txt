@@ -478,5 +478,149 @@ Functions                   https://automatetheboringstuff.com/3e/chapter4.html
                 and every call to get_random_dice_roll() 
                 just returns the same stored value.
     Practice Programs 
-        .\python-exercises\practice-programs.py
-        The Collatz Sequence
+        .\python-exercises\collatz.py
+Debugging                   https://automatetheboringstuff.com/3e/chapter5.html
+    Raising Exception
+        +   using raise keyword 
+        +   a call to the Exception() function 
+        +   string , error message passed to the Exception() function 
+        +   example 
+            >>> raise Exception('This is the error message.')
+            Traceback (most recent call last):
+                File '<pyshell#191>', line 1, in <module>
+                    raise Exception('This is the error message.')
+            Exception: This is the error message.
+        +   sample usage 
+            .\python-exercises\box-print.py
+    Assertions 
+        +   structure
+            +   the assert keyword 
+            +   a condition , expression that evaluates to True or False 
+            +   a comma
+            +   a string to display when the condition is False 
+        +   an assert statement, 
+            +   asserts that the condition holds true, and 
+                if not, there is a bug somewhere, so immediately
+                stop the program.
+            +   example 1
+                interactive shell:
+                    >>> ages = [26, 57, 92, 54, 22, 15, 17, 80, 47, 73]
+                    >>> ages.sort()
+                    >>> ages
+                    [15, 17, 22, 26, 47, 54, 57, 73, 80, 92]
+                    >>> assert ages[0] <= ages[-1]  # Assert that the first age is <= the last age.
+            +   example 2
+                interactive shell:
+                    >>> ages = [26, 57, 92, 54, 22, 15, 17, 80, 47, 73]
+                    >>> ages.reverse()
+                    >>> ages
+                    [73, 47, 80, 17, 15, 22, 54, 92, 57, 26]
+                    >>> assert ages[0] <= ages[-1], 'Assert that the first age is <= the last age.'
+    Logging
+        +   the logging module
+            import Logging 
+            loggin.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+        +   sample
+            .\python-exercises\factorial-log.py
+    Debugging an Addition Program 
+        .\python-exercises\buggy-adding-program.py
+    Practice Program: Debuggin Coin Toss 
+        .\python-exercises\coin-toss.py
+Lists                       https://automatetheboringstuff.com/3e/chapter6.html
+    +   The List Data Type 
+        +   a collection of values in an ordered sequence 
+        +   sample 
+            +   [1,2,3]
+            +   ['cat', 'bat', 'rat', 'elephant']
+            +   ['hello', 3.1415, True, None, 42]
+    +   Indexes 
+        +   the ordered placement of an element in a collection 
+        +   usually enclosed between brackets , collection[index]
+        +   starts at 0 
+    +   Negative Indexes 
+        +   indexing that starts at the last element of the collection 
+    +   Slices  
+        +   slice = collection[start:end] , where end is exclusive
+    +   Updating values 
+        +   collection = [1,2,3,4,5,6]
+        +   collection[3] = 1 ,  change element at index 3 to value 1 
+        +   [1,2,3,1,5,6] , new values of the collection 
+    +   Concatenation and Replication 
+        +   [1,2,3] + [4,5,6]
+            [1,2,3,4,5,6]
+        +   ['x','y','z'] * 3
+            ['x','y','z','x','y','z','x','y','z']
+    +   del Statements 
+        spam = ['cat','bat','rat','elephant']
+        del spam[2] , delete element at index 2 
+        ['cat','bat','elephant'] , new values of spam 
+    +   Working with lists 
+        .\python-exercises\all-my-cats1.py 
+    +   Enumeration 
+        +   returns the index number and the element in a collection 
+        +   sample 
+            >>> supplies = ['pens','stapler','flamethrowers','binders']
+            >>> for index,item in enumerate(supplies): print('Index '+str(index\)+ ' in supplies is: '+item)                                        
+            ... 
+            Index 0 in supplies is: pens
+            Index 1 in supplies is: stapler
+            Index 2 in supplies is: flamethrowers
+            Index 3 in supplies is: binders
+    +   using the random module in a list 
+        +   sample , using random.choice
+            >>> import random
+            >>> pets = ['dog','cat','moose']
+            >>> random.choice(pets)
+            'moose'
+            >>> random.choice(pets)
+            'dog'
+            >>> random.choice(pets)
+            'moose'
+        +   sample 1 , using random.shuffle
+            >>> import random
+            >>> people = ['alice','bob','carol','david']
+            >>> random.shuffle(people)
+            >>> people
+            ['david', 'carol', 'bob', 'alice']
+            >>> random.shuffle(people)
+            >>> people
+            ['david', 'carol', 'alice', 'bob']
+            >>> random.shuffle(people)
+            >>> people
+            ['carol', 'david', 'bob', 'alice']
+    +   list methods 
+        +   using .index() method, returns the index of the first occurrence of the value passed
+            +   sample 
+                >>> people
+                ['carol', 'david', 'bob', 'alice']
+                >>> people.index('bob')
+                2
+                >>> people.index('alice')
+                3
+                >>> people.index('alic')
+                Traceback (most recent call last):
+                File "<python-input-19>", line 1, in <module>
+                    people.index('alic')
+                    ~~~~~~~~~~~~^^^^^^^^
+                ValueError: 'alic' is not in list
+        +   using .append() method, adds an element to the end of the list 
+            +   sample 
+                >>> people
+                ['carol', 'david', 'bob', 'alice']
+                >>> people.append('gab')
+                >>> people
+                ['carol', 'david', 'bob', 'alice', 'gab']
+                >>> people.append('me')
+                >>> people
+                ['carol', 'david', 'bob', 'alice', 'gab', 'me']
+        +   using .insert() method, adds an element at a given index 
+            +   sample 
+                >>> people
+                ['carol', 'david', 'bob', 'alice']
+                >>> people.insert(1,'gab')
+                >>> people
+                ['carol', 'gab', 'david', 'bob', 'alice']
+                >>> people.insert(-1,'me')
+                >>> people
+                ['carol', 'gab', 'david', 'bob', 'me', 'alice']
+                
